@@ -86,7 +86,7 @@ void	acudam(int x, int y, void *mlx, void *mlx_win)
 			(*images()).enemy, x * 64, y * 64);
 }
 
-void	ola(int xx, int yy, int x, int y)
+int	ola(int xx, int yy, int x, int y)
 {
 	if ((*map())[yy + y][xx + x] == 'C')
 		(*megalx()).coles--;
@@ -97,6 +97,7 @@ void	ola(int xx, int yy, int x, int y)
 		if ((*megalx()).coles == 0)
 			helping1();
 		else
-			return ;
+			return (100);
 	}
+	return (1);
 }

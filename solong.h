@@ -53,11 +53,12 @@ void	ft_playerlimit(void);
 t_image	*images(void);
 t_mlx	*megalx(void);
 void	acudam(int x, int y, void *mlx, void *mlx_win);
-void	ola(int xx, int yy, int x, int y);
+int		ola(int xx, int yy, int x, int y);
 void	perdeste(void);
 void	helping1(void);
 void	ft_move(int x, int y);
 void	ft_coles(void);
 void	ft_putwindow(void *mlx, void *mlx_win);
+int		ft_exit(void);
 
 #endif

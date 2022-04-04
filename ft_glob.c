@@ -25,3 +25,9 @@ t_mlx	*megalx(void)
 
 	return (&aaa);
 }
+
+int	ft_exit(void)
+{
+	exit (0);
+	return (0);
+}

@@ -83,6 +83,7 @@ int	main(int argc, char *argv[])
 	ft_coles();
 	ft_putwindow((*megalx()).mlx, (*megalx()).mlx_win);
 	ft_print();
+	mlx_hook((*megalx()).mlx_win, 17, 0, ft_exit, 0);
 	mlx_key_hook((*megalx()).mlx_win, key, 0);
 	mlx_loop((*megalx()).mlx);
 	im_fin();

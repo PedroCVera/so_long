@@ -37,7 +37,8 @@ void	ft_move(int x, int y)
 		{
 			if ((*map())[yy][xx] == 'P' && (*map())[yy + y][xx + x] != '1')
 			{
-				ola(xx, yy, x, y);
+				if (ola(xx, yy, x, y) == 100)
+					return ;
 				(*map())[yy][xx] = '0';
 				(*map())[yy + y][xx + x] = 'P';
 				(*megalx()).moves++;
