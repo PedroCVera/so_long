@@ -6,7 +6,7 @@
 /*   By: pcoimbra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 15:19:50 by pcoimbra          #+#    #+#             */
-/*   Updated: 2022/03/28 15:19:51 by pcoimbra         ###   ########.fr       */
+/*   Updated: 2022/04/08 15:30:22 by pcoimbra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@
 # include <fcntl.h>
 # include "./get_next_line/get_next_line.h"
 # include <stdio.h>
+
+//# define malloc(x) NULL
 
 typedef struct s_image {
 	void	*chao;

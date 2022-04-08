@@ -6,7 +6,7 @@
 /*   By: pcoimbra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/01 11:47:36 by pcoimbra          #+#    #+#             */
-/*   Updated: 2022/04/01 11:47:37 by pcoimbra         ###   ########.fr       */
+/*   Updated: 2022/04/08 15:29:16 by pcoimbra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,11 @@ int	map_checker(char *name, char ***str)
 	if (ft_checkname(name) == 0)
 		return (0);
 	(*str) = malloc((i + 1) * sizeof(char *));
+	if (!(*str))
+	{
+		free((*str));
+		return (0);
+	}
 	i = 0;
 	fd = open(name, O_RDONLY);
 	if (fd < 0)
@@ -28,8 +33,7 @@ int	map_checker(char *name, char ***str)
 	(*str)[i] = get_next_line(fd);
 	while ((*str)[i])
 		(*str)[++i] = get_next_line(fd);
-	if (!check_map((*str)) || !check_length((*str))
-		|| !check_invalid((*str)))
+	if (!check_map((*str)) || !check_length((*str)) || !check_invalid((*str)))
 	{
 		free_matrix((str));
 		return (0);
