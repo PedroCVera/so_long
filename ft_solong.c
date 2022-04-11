@@ -87,4 +87,5 @@ int	main(int argc, char *argv[])
 	mlx_key_hook((*megalx()).mlx_win, key, 0);
 	mlx_loop((*megalx()).mlx);
 	im_fin();
+	free_map(map());
 }

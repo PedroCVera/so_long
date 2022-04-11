@@ -17,3 +17,16 @@ void	ft_error(void)
 	write(1, "Error\n", 6);
 	exit (1);
 }
+
+void	free_map(char ***ola)
+{
+	int	ind;
+
+	ind = 0;
+	while ((*ola)[ind] != NULL)
+	{
+		free((*ola)[ind]);
+		ind++;
+	}
+	free (*ola);
+}
