@@ -15,7 +15,7 @@
 void	ft_error(void)
 {
 	write(1, "Error\n", 6);
-	ft_exit();
+	ft_exit(1);
 }
 
 void	free_map(char ***ola)
@@ -23,10 +23,13 @@ void	free_map(char ***ola)
 	int	ind;
 
 	ind = 0;
-	while ((*ola)[ind] != NULL)
+	if (ola)
 	{
-		free((*ola)[ind]);
-		ind++;
+		while (*ola && (*ola)[ind] != NULL)
+		{
+			free((*ola)[ind]);
+			ind++;
+		}
+		free (*ola);
 	}
-	free (*ola);
 }

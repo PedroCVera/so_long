@@ -22,7 +22,7 @@ int	map_checker(char *name, char ***str)
 		return (0);
 	(*str) = malloc((i + 1) * sizeof(char *));
 	if (!(*str))
-		return (0);
+		ft_error();
 	i = 0;
 	fd = open(name, O_RDONLY);
 	if (fd < 0)

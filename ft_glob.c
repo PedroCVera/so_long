@@ -28,10 +28,11 @@ t_mlx	*megalx(void)
 /*
 	system("leaks -- so_long");*/
 
-int	ft_exit(void)
+int	ft_exit(int opt)
 {
 	im_fin();
-	free_map(map());
+	if (opt != 1)
+		free_map(map());
 	exit (0);
 	return (0);
 }

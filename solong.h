@@ -6,7 +6,7 @@
 /*   By: pcoimbra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 15:19:50 by pcoimbra          #+#    #+#             */
-/*   Updated: 2022/04/08 15:30:22 by pcoimbra         ###   ########.fr       */
+/*   Updated: 2022/04/11 19:15:15 by pcoimbra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ void	helping1(void);
 void	ft_move(int x, int y);
 void	ft_coles(void);
 void	ft_putwindow(void *mlx, void *mlx_win);
-int		ft_exit(void);
+int		ft_exit(int opt);
 void	ft_error(void);
 void	free_map(char ***ola);
 void	im_fin(void);

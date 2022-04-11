@@ -26,7 +26,7 @@ void	ft_print(void)
 int	key(int keycode)
 {
 	if (keycode == 53)
-		ft_exit();
+		ft_exit(0);
 	if (keycode == 13)
 		ft_move(0, -1);
 	if (keycode == 0)
@@ -59,12 +59,18 @@ void	im_init(int i)
 
 void	im_fin(void)
 {
-	mlx_destroy_image((*megalx()).mlx, (*images()).parede);
-	mlx_destroy_image((*megalx()).mlx, (*images()).chao);
-	mlx_destroy_image((*megalx()).mlx, (*images()).player);
-	mlx_destroy_image((*megalx()).mlx, (*images()).cole);
-	mlx_destroy_image((*megalx()).mlx, (*images()).exit);
-	mlx_destroy_image((*megalx()).mlx, (*images()).enemy);
+	if ((*images()).parede)
+		mlx_destroy_image((*megalx()).mlx, (*images()).parede);
+	if ((*images()).chao)
+		mlx_destroy_image((*megalx()).mlx, (*images()).chao);
+	if ((*images()).player)
+		mlx_destroy_image((*megalx()).mlx, (*images()).player);
+	if ((*images()).cole)
+		mlx_destroy_image((*megalx()).mlx, (*images()).cole);
+	if ((*images()).exit)
+		mlx_destroy_image((*megalx()).mlx, (*images()).exit);
+	if ((*images()).enemy)
+		mlx_destroy_image((*megalx()).mlx, (*images()).enemy);
 }
 
 int	main(int argc, char *argv[])
@@ -91,5 +97,5 @@ int	main(int argc, char *argv[])
 	mlx_hook((*megalx()).mlx_win, 17, 0, ft_exit, 0);
 	mlx_key_hook((*megalx()).mlx_win, key, 0);
 	mlx_loop((*megalx()).mlx);
-	ft_exit();
+	ft_exit(0);
 }
