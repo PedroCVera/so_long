@@ -30,3 +30,10 @@ void	free_map(char ***ola)
 	}
 	free (*ola);
 }
+
+void	ft_error(void)
+{
+	write(1, "Error\n", 6);
+	free_map(map());
+	exit (1);
+}

@@ -21,6 +21,7 @@ void	perdeste(void)
 void	helping1(void)
 {
 	(*megalx()).moves++;
+	free_map(map());
 	exit (0);
 }
 
