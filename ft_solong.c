@@ -21,7 +21,7 @@ void	ft_print(void)
 int	key(int keycode)
 {
 	if (keycode == 53)
-		exit (0);
+		ft_exit();
 	if (keycode == 13)
 		ft_move(0, -1);
 	if (keycode == 0)
@@ -86,6 +86,5 @@ int	main(int argc, char *argv[])
 	mlx_hook((*megalx()).mlx_win, 17, 0, ft_exit, 0);
 	mlx_key_hook((*megalx()).mlx_win, key, 0);
 	mlx_loop((*megalx()).mlx);
-	im_fin();
-	free_map(map());
+	ft_exit();
 }

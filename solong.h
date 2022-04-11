@@ -64,5 +64,6 @@ void	ft_putwindow(void *mlx, void *mlx_win);
 int		ft_exit(void);
 void	ft_error(void);
 void	free_map(char ***ola);
+void	im_fin(void);
 
 #endif
