@@ -14,8 +14,13 @@
 
 void	ft_print(void)
 {
+	char	*s;
+
+	s = ft_itoa((*megalx()).moves);
 	mlx_string_put((*megalx()).mlx, (*megalx()).mlx_win,
-		10, 10, 0x00000000, ft_itoa((*megalx()).moves));
+		10, 10, 0x00000000, s);
+	if (s)
+		free (s);
 }
 
 int	key(int keycode)

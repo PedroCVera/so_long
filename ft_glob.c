@@ -25,12 +25,13 @@ t_mlx	*megalx(void)
 
 	return (&aaa);
 }
+/*
+	system("leaks -- so_long");*/
 
 int	ft_exit(void)
 {
 	im_fin();
 	free_map(map());
-	system("leaks -- so_long");
 	exit (0);
 	return (0);
 }
