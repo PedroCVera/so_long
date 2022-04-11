@@ -62,5 +62,6 @@ void	ft_move(int x, int y);
 void	ft_coles(void);
 void	ft_putwindow(void *mlx, void *mlx_win);
 int		ft_exit(void);
+void	ft_error(void);
 
 #endif

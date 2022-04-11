@@ -6,11 +6,11 @@
 #    By: ralves-g <ralves-g@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/26 16:26:20 by ralves-g          #+#    #+#              #
-#    Updated: 2022/03/28 14:51:46 by pcoimbra         ###   ########.fr        #
+#    Updated: 2022/04/11 16:28:44 by pcoimbra         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC			= @gcc
+CC			= gcc
 CFLAGS		= -Wall -Wextra -Werror -Imlx
 MLXFLAGS	= -lmlx -framework OpenGL -framework AppKit
 RM			= rm -f
@@ -22,7 +22,7 @@ NAME		= so_long
 INCLUDE		= get_next_line/get_next_line.h so_long.h
 SRCS		= get_next_line/get_next_line.c get_next_line/get_next_line_utils.c \
 				ft_solong.c ft_mpche.c ft_itoa.c ft_strdup.c ft_utils.c \
-				ft_utils2.c ft_utils3.c ft_glob.c
+				ft_utils2.c ft_utils3.c ft_glob.c ft_utils4.c
 
 OBJS		= $(SRCS:.c=.o)
 

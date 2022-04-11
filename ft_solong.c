@@ -54,11 +54,12 @@ void	im_init(int i)
 
 void	im_fin(void)
 {
-	free((*images()).parede);
-	free((*images()).chao);
-	free((*images()).player);
-	free((*images()).cole);
-	free((*images()).exit);
+	mlx_destroy_image((*megalx()).mlx, (*images()).parede);
+	mlx_destroy_image((*megalx()).mlx, (*images()).chao);
+	mlx_destroy_image((*megalx()).mlx, (*images()).player);
+	mlx_destroy_image((*megalx()).mlx, (*images()).cole);
+	mlx_destroy_image((*megalx()).mlx, (*images()).exit);
+	mlx_destroy_image((*megalx()).mlx, (*images()).enemy);
 }
 
 int	main(int argc, char *argv[])
@@ -69,16 +70,15 @@ int	main(int argc, char *argv[])
 	if (argc != 2)
 		return (0);
 	if (!map_checker(argv[1], map()))
-	{
-		write(1, "Error\n", 6);
-		return (0);
-	}
+		ft_error();
 	ysize = map_y(argv[1]) * 64;
 	xsize = (ft_xlen((*map())[0]) - 1) * 64;
 	ft_playerlimit();
 	(*megalx()).mlx = mlx_init();
 	(*megalx()).mlx_win = mlx_new_window((*megalx()).mlx,
 			xsize, ysize, "so_long!");
+	if (!(*megalx()).mlx)
+		ft_error();
 	im_init(64);
 	ft_coles();
 	ft_putwindow((*megalx()).mlx, (*megalx()).mlx_win);
